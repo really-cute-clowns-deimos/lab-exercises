@@ -2,7 +2,7 @@
 //
 //     Example Input:
 
-    [
+   var users = [
         {
             isAdmin: true,
             email: 'user1@email.com'
@@ -16,6 +16,17 @@
             email: 'user3@email.com'
         }
     ];
+
+
+function adminList(x) {
+    var z = 0;
+    x.forEach(function (y) {
+        if (y.isAdmin === true){
+            return z + 1;
+        }
+    })
+}
+console.log(adminList(users));
 // Example Output (before refactor): 2
 //
 // Example Output (after 1st refactor):
