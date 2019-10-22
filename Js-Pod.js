@@ -19,14 +19,18 @@
 
 
 function adminList(x) {
-    var z = 0;
-    x.forEach(function (y) {
-        if (y.isAdmin === true){
-            return z + 1;
+    var z = [];
+    x.forEach(function (y, index) {
+        if (x[index].isAdmin === true){
+            z.push(y);
         }
-    })
+    });
+    console.log(z);
 }
+
 console.log(adminList(users));
+
+
 // Example Output (before refactor): 2
 //
 // Example Output (after 1st refactor):
