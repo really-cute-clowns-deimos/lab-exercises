@@ -17,12 +17,15 @@
     // calculateScore([["S", "R"], ["R", "S"], ["R", "R"]]) ➞ "Tie"
 
 
-//Given an array of users, each defined by an object with the following properties: name, score, reputation create a function that sorts the array to form the correct leaderboard.
-//
-// The leaderboard takes into consideration the score of each user of course, but an emphasis is put on their reputation in the community, so to get the trueScore, you should add the reputation multiplied by 2 to the score.
-//
+//Given an array of users, each defined by an object with the following properties:
+// name, score, reputation
+// create a function that sorts the array to form the correct leaderboard.
+
+// The leaderboard takes into consideration the score of each user of course, but an emphasis is put on their reputation in the community,
+// so to get the trueScore, you should add the reputation multiplied by 2 to the score.
+/
 // Once you know the trueScore of each user, sort the array according to it in descending order.
-    // leaderboards([
+    //ex. leaderboards([
     //     { name: "a", score: 100, reputation: 20 },
     // { name: "b", score: 90, reputation: 40 },
     // { name: "c", score: 110, reputation: 30 },
@@ -40,7 +43,6 @@
 // color (string),
 // sterilized (boolean),
 // shotRecords (array of objects with properties for date and typeOfShot)
-
 // The dog object should have methods to:
 // bark() - will console.log "Woof!"
 // getOlder() - will increase age by 1
