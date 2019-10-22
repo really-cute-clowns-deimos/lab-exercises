@@ -31,3 +31,19 @@
     //     { name: "b", score: 90, reputation: 40 },  // trueScore = 170
     //     { name: "a", score: 100, reputation: 20 }  // trueScore = 140
     // ]
+
+//Create a dog object
+// The dog object should have properties for:
+// breed (string),
+// weightInPounds (number),
+// age (number),
+// color (string),
+// sterilized (boolean),
+// shotRecords (array of objects with properties for date and typeOfShot)
+
+// The dog object should have methods to:
+// bark() - will console.log "Woof!"
+// getOlder() - will increase age by 1
+// fix() - will set sterile to true if dog sterilized property is false
+// vaccinate() - takes in an argument for the name of the shot and adds a new shot
+    //with the current date to the shotRecords array
