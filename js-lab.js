@@ -68,31 +68,21 @@
         //     console.log(arrayOfScores[i].name + ": " + trueScore)
         // }
 
-        //Researched Online, found this
-
-        // var sortedArray = arrayOfScores.sort((a, b) => (a.reputation * 2 + a.score < b.reputation * 2 + b.score) ? 1 : -1);
 
          arrayOfScores.sort(function (a,b) {
              var aTrueScore = (a.reputation * 2 ) + a.score;
              var bTrueScore = (b.reputation * 2 ) + b.score;
+             //this return sorts the scores in the function
              return bTrueScore - aTrueScore;
 
-             // return a.reputation * 2 + a.score < b.reputation * 2 + b.score
          });
-
+        //need this return to actually see the objects sorted
         return arrayOfScores
 
 
     }
 
-
     console.log(leaderboards(scores));
-
-    // console.log(scores.sort(function (a, b) {
-    //     var aTrueScore = (a.reputation * 2) + a.score;
-    //     var bTrueScore = (b.reputation * 2) + b.score;
-    //     return aTrueScore - bTrueScore;
-    // }));
 
 //Create a dog object
 // The dog object should have properties for:
@@ -121,16 +111,22 @@
             }],
             bark: function () {
                 return "Woof";
-            }
+            },
+            getOlder: function(){
+                return ++dog.age;   //++ goes before age, so it updates first
+            },
+
         };
 
     // dog.bark = function() {
     //     console.log("woof");
     // };
     console.log(dog.bark());
-    dog.getOlder = function(){
-        return ++dog.age;   //++ goes before age, so it updates first
-    };
+    console.log(dog.getOlder());
+
+    // dog.getOlder = function(){
+    //     return ++dog.age;   //++ goes before age, so it updates first
+    // };
 
     dog.fix = function() {
         if (dog.sterilized == false){
@@ -151,7 +147,7 @@
     };
 
     console.log(dog);
-    dog.bark();
+    // dog.bark();
     console.log(dog.getOlder());
     dog.fix();
     console.log(dog);
