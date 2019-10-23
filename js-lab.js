@@ -61,23 +61,38 @@
 
 
     function leaderboards(arrayOfScores) {
+        //
+        // for(var i = 0; i < scores.length; i++){
+        //     //var repScore = arrayOfScores[i].reputation * 2;
+        //     var trueScore = (arrayOfScores[i].reputation * 2) + arrayOfScores[i].score;
+        //     console.log(arrayOfScores[i].name + ": " + trueScore)
+        // }
 
-        for(var i = 0; i < scores.length; i++){
-            //var repScore = arrayOfScores[i].reputation * 2;
-            var trueScore = (arrayOfScores[i].reputation * 2) + arrayOfScores[i].score;
-            console.log(arrayOfScores[i].name + ": " + trueScore)
-        }
+        //Researched Online, found this
 
-        //Researched Online, found this, works but don't really know why
-        var sortedArray = arrayOfScores.sort((a, b) => (a.reputation * 2 + a.score < b.reputation * 2 + b.score) ? 1 : -1);
+        // var sortedArray = arrayOfScores.sort((a, b) => (a.reputation * 2 + a.score < b.reputation * 2 + b.score) ? 1 : -1);
 
-        console.log("returning array");
-        return sortedArray;
+         arrayOfScores.sort(function (a,b) {
+             var aTrueScore = (a.reputation * 2 ) + a.score;
+             var bTrueScore = (b.reputation * 2 ) + b.score;
+             return bTrueScore - aTrueScore;
+
+             // return a.reputation * 2 + a.score < b.reputation * 2 + b.score
+         });
+
+        return arrayOfScores
+
+
     }
 
 
     console.log(leaderboards(scores));
 
+    // console.log(scores.sort(function (a, b) {
+    //     var aTrueScore = (a.reputation * 2) + a.score;
+    //     var bTrueScore = (b.reputation * 2) + b.score;
+    //     return aTrueScore - bTrueScore;
+    // }));
 
 //Create a dog object
 // The dog object should have properties for:
@@ -103,13 +118,16 @@
             shotRecords: [{
                 date: "Jan 20, 2016",
                 typeOfShot: "puppy"
-            }]
+            }],
+            bark: function () {
+                return "Woof";
+            }
         };
 
-    dog.bark = function() {
-        console.log("woof");
-    };
-
+    // dog.bark = function() {
+    //     console.log("woof");
+    // };
+    console.log(dog.bark());
     dog.getOlder = function(){
         return ++dog.age;   //++ goes before age, so it updates first
     };
