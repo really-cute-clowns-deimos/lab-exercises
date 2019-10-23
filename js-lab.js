@@ -132,11 +132,6 @@
             });
     };
 
-    var array = [1,2,3];
-    var arrays = ["1", "2", "3"];
-    var arrayo = [{name: "alex"}, {name: "lauren"}];
-
-
     console.log(dog);
     dog.bark();
     console.log(dog.getOlder());
