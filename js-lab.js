@@ -115,46 +115,32 @@
             getOlder: function(){
                 return ++dog.age;   //++ goes before age, so it updates first
             },
+            fix: function() {
+                if (dog.sterilized == false){
+                    dog.sterilized = true;
+                }
+                else{
+                    //do nothing
+                }
+
+            },
+            vaccinate: function(newShot){
+                dog.shotRecords.push(
+                    {
+                        date:"Oct 22, 2019",
+                        typeOfShot: newShot
+                    });
+            }
 
         };
 
-    // dog.bark = function() {
-    //     console.log("woof");
-    // };
     console.log(dog.bark());
     console.log(dog.getOlder());
-
-    // dog.getOlder = function(){
-    //     return ++dog.age;   //++ goes before age, so it updates first
-    // };
-
-    dog.fix = function() {
-        if (dog.sterilized == false){
-            dog.sterilized = true;
-        }
-        else{
-            //do nothing
-        }
-
-    };
-
-    dog.vaccinate = function(newShot){
-        dog.shotRecords.push(
-            {
-                date:"Oct 22, 2019",
-                typeOfShot: newShot
-            });
-    };
-
-    console.log(dog);
-    // dog.bark();
-    console.log(dog.getOlder());
-    dog.fix();
-    console.log(dog);
-    dog.vaccinate("Gomez Shot")
-    console.log(dog);
+    console.log(dog.fix());
+    console.log(dog.vaccinate("Gomez"));
 
 
-})()
 
+
+})();
 
