@@ -25,7 +25,7 @@ function adminList(x) {
             z.push(y);
         }
     });
-    console.log(z);
+    return z;
 }
 
 console.log(adminList(users));
@@ -39,15 +39,32 @@ console.log(adminList(users));
         "white",
         "wheat",
         "rhy",
-        "white"
+        "white",
+        "wheat"
     ];
 
 var fillings = [
     "pb&j",
     "ham",
     "cheese steak",
-    "tuna"
+    "tuna",
+    "jelly"
 ];
+
+function makeSandwichObject(breads, fillings) {
+    var arr = [];
+    for (var i = 0; i < breads.length; i++) {
+        var obj = {};
+        obj.bread = breads[i];
+        arr.push(obj);
+    }
+        fillings.forEach(function (b,index) {
+        arr[index].filling = b, index;
+    });
+        console.log(arr);
+}
+console.log(makeSandwichObject(breads,fillings));
+
 
 
 //
@@ -65,41 +82,37 @@ var fillings = [
 // }
 // console.log(makeSandwichObjects(breads, fillings));
 
+
 //
-//
-// function my_Clock()
-// {
+// function my_Clock() {
 //     this.cur_date = new Date();
 //     this.hours = this.cur_date.getHours();
 //     this.minutes = this.cur_date.getMinutes();
 //     this.seconds = this.cur_date.getSeconds();
 // }
-// my_Clock.prototype.run = function ()
-// {
+//
+// my_Clock.prototype.run = function () {
 //     setInterval(this.update.bind(this), 1000);
 // };
-// my_Clock.prototype.update = function ()
-// {
+// my_Clock.prototype.update = function () {
 //     this.updateTime(1);
 //     console.log(this.hours + ":" + this.minutes + ":" + this.seconds);
 // };
-// my_Clock.prototype.updateTime = function (secs)
-// {
+//
+// my_Clock.prototype.updateTime = function (secs) {
 //     this.seconds+= secs;
-//     if (this.seconds >= 60)
-//     {
+//     if (this.seconds >= 60) {
 //         this.minutes++;
 //         this.seconds= 0;
 //     }
-//     if (this.minutes >= 60)
-//     {
+//     if (this.minutes >= 60) {
 //         this.hours++;
 //         this.minutes=0;
 //     }
-//     if (this.hours >= 24)
-//     {
+//     if (this.hours >= 24) {
 //         this.hours = 0;
 //     }
+//
 // };
 // var clock = new my_Clock();
 // clock.run();
