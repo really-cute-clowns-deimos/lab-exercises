@@ -1,5 +1,6 @@
 (function () {
     "use strict";
+    //https://edabit.com/challenge/QtcPzxgcZJQdsfdMS
  //Create a function that takes in an array of miles run every saturday and returns runners total number of progress days
     //track the number of miles run every saturday and if it is more than the previous run call it a progress day
         //not a progress day if new number of miles is the same as previous week
@@ -68,7 +69,7 @@
     }
 
 
-
+//https://edabit.com/challenge/nTZqZmAkLrjRx9PcK
 //Given an array of users, each defined by an object with the following properties: name, score, reputation
 // create a function that sorts the array to form the correct leaderboard.
 // so to get the trueScore, you should add the reputation multiplied by 2 to the score.
