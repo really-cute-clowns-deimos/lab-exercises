@@ -144,7 +144,7 @@
                 return "Woof";
             },
             getOlder: function(){
-                return ++dog.age;   //++ goes before age, so it updates first
+                return dog.age++;
             },
             fix: function() {
                 if (dog.sterilized == false){
