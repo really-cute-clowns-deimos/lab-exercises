@@ -61,8 +61,8 @@ function removeAll(arr, x){
             }
         });
     }
-    // var newArray = arr.splice(x);
-    // console.log(arr.splice(2,1));
+    var newArray = arr.splice(x);
+    console.log(arr.splice(2,1));
     console.log(arr);
 
     // return the new Array
