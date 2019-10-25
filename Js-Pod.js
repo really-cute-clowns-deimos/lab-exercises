@@ -58,15 +58,26 @@ function makeSandwichObject(breads, fillings) {
         obj.bread = breads[i];
         arr.push(obj);
     }
-        fillings.forEach(function (b,index) {
+    fillings.forEach(function (b, index) {
         arr[index].filling = b, index;
     });
-        console.log(arr);
+    return arr;
 }
 console.log(makeSandwichObject(breads,fillings));
 
+ function isWeekend(date1){
+    var dt = new Date(date1);
 
-
+    if(dt.getDay() == 6 || dt.getDay() == 0)
+    {
+        return "weekend";
+    } else {
+        return "weekday";
+    }
+}
+console.log(isWeekend('Nov 15, 2014'));
+console.log(isWeekend('Nov 16, 2014'));
+console.log(isWeekend('Nov 17, 2014'));
 //
 // function makeSandwichObjects(x,y) {
 //     var z = [{},{},{},{}];
