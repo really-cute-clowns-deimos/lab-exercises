@@ -59,6 +59,26 @@ function success() {
 
 };
 
+$(function() {
+
+    var dog = $('#doggo')
+
+    dog.click(function(){
+        var doggoo = $(this);
+
+        if(doggoo.data('rotating')){
+            clearInterval(doggoo.data('rotating'));
+            doggoo.data('rotating', false)
+        } else {
+            doggoo.data('rotating', setInterval(function(){
+                var degree = doggoo.data('degree') || 0;
+                doggoo.css({ transform: 'rotate(' + degree + 'deg)'});
+                doggoo.data('degree', ++degree)
+            }, 5));
+        }
+    });
+
+});
 
 
 
