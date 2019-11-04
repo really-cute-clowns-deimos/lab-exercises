@@ -26,7 +26,6 @@ $('li').hover(
 // CLICK CLASS AND EXPAND TO CLASS TYPE
 // $('#tank-list').hide();
 // $('#tank-toggle').click(function() {
-//     $('#tank-toggle').css('font-size','40px');
 //     $('#tank-list').slideToggle();
 // });
 // $('#melee-list').hide();
@@ -47,7 +46,14 @@ $('li').hover(
 // });
 $('li').each(function(){
     $(this).children().hide();
-})
+    $(this).click(function(){
+        $(this).css('font-size','30px');
+        $(this).children().slideToggle();
+        $(this).click(function(){
+            $(this).css('font-size','20px');
+        });
+    });
+});
 
 
 
