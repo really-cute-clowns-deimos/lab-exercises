@@ -9,6 +9,22 @@ $(document).ready(function() {
 
 $('.nav-wrapper').css('background-color', '#6EA4B3');
 
+//SIDE NAV ICONS
+$('.flex-container').css('display','flex').css('flex-direction','column').css('position','fixed').css('z-index','1').css('margin-top','140px').css('margin-left','1210px');
+$('.flex-item').css('height','40px').css('width','40px').css('display','flex').css('margin','10px').css('opacity','.6');
+
+$('.flex-item').hover(
+    function() {
+        $(this).css('-webkit-transition', '1s').css('opacity','1');
+        // APP ICONS FADE IN
+    },
+    function() {
+        $(this).css('-webkit-transition', '1s').css('opacity','.7');
+        // APP ICONS FADE OUT
+    }
+);
+// $('#facebook-icon').css('height','25px').css('width','25px').css('position','fixed');
+
 $('.codeup').css('border','2px solid black');
 $('.codeup').css('box-shadow','1px 2px 4px 1px');
 
@@ -44,7 +60,7 @@ $('li').hover(
 // $('#ranged-toggle').click(function() {
 //     $('#ranged-list').slideToggle();
 // });
-$('li').each(function(){
+$('.class-toggle').each(function(){
     $(this).children().hide();
     $(this).click(function(){
         $(this).css('font-size','30px');
