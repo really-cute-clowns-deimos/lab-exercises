@@ -6,9 +6,9 @@
     <!-- materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- foundation -->
-
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg==" crossorigin="anonymous">
+
 </head>
 <body>
 <!-- materialize navbar -->
@@ -26,6 +26,15 @@
         </div>
     </div>
 </nav>
+
+<!-- Side Nav Fixed App Icons Facebook Twitter Youtube Twitch Discord -->
+<div class="flex-container">
+    <img class="flex-item" id="facebook-icon" src="img/facebook-iphone-icon-png-1.jpg">
+    <img class="flex-item" id="twitter-icon" src="img/twitter-app-icon.png">
+    <img class="flex-item" id="youtube-icon" src="img/youtube-app-icon.png">
+    <img class="flex-item" id="twitch-icon" src="img/twitch-tv-icon.png">
+    <img class="flex-item" id="discord-icon" src="img/discord-app-icon.png">
+</div>
 
 
 <div class="z-depth-2" id="class-top-div">
@@ -49,7 +58,7 @@
 <h3 id="classes-header">Types of Classes</h3>
 <div class="z-depth-4" id="class-bottom-div">
     <ul id="classes" class="class-classes">
-        <li id="tank-toggle">Tank
+        <li class="class-toggle" id="tank-toggle">Tank
             <ul id="tank-list">
                 <li>Darkrunner</li>
                 <li>Templar</li>
@@ -58,7 +67,7 @@
                 <li>Death Warden</li>
             </ul>
         </li>
-        <li id="melee-toggle">Melee
+        <li class="class-toggle" id="melee-toggle">Melee
             <ul id="melee-list">
                 <li>Executioner</li>
                 <li>Blade Dancer</li>
@@ -67,7 +76,7 @@
                 <li>Bloodreaver</li>
             </ul>
         </li>
-        <li id="support-healer-toggle">Support Healer
+        <li class="class-toggle" id="support-healer-toggle">Support Healer
             <ul id="support-healer-list">
                 <li>Cleric</li>
                 <li>Confessor</li>
@@ -76,7 +85,7 @@
                 <li>Assassin</li>
             </ul>
         </li>
-        <li id="offensive-caster-toggle"> Offensive Caster
+        <li class="class-toggle" id="offensive-caster-toggle"> Offensive Caster
             <ul id="offensive-caster-list">
                 <li>Spellslinger</li>
                 <li>Revenant</li>
@@ -85,7 +94,7 @@
                 <li>Spectre</li>
             </ul>
         </li>
-        <li id="ranged-toggle">Ranged
+        <li class="class-toggle" id="ranged-toggle">Ranged
         <ul id="ranged-list">
             <li>Primeval</li>
             <li>Stonearrow</li>
@@ -99,7 +108,9 @@
 
 <script src="js/jquery.lab.js"></script>
 <script src="js/pods-joshua-week-two.js"></script>
+<!-- Materialize -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- Foundation -->
 <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/js/foundation.min.js" integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk= sha384-KzKofw4qqetd3kvuQ5AdapWPqV1ZI+CnfyfEwZQgPk8poOLWaabfgJOfmW7uI+AV sha512-0gHfaMkY+Do568TgjJC2iMAV0dQlY4NqbeZ4pr9lVUTXQzKu8qceyd6wg/3Uql9qA2+3X5NHv3IMb05wb387rA==" crossorigin="anonymous"></script>
 
 </body>
