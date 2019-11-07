@@ -1,0 +1,68 @@
+[
+    {
+        "type": "Red Velvet",
+        "description": "Tootsie roll dessert lemon drops cookie lollipop danish chocolate bar. Gummi bears sweet roll lollipop. Danish oat cake croissant. Croissant brownie tart. Marshmallow muffin icing icing. Sweet roll gingerbread carrot cake fruitcake. hupa chups gummi bears halvah marzipan sugar plum jelly beans tootsie roll cookie bear claw.essert gummies sweet roll ice cream dragée gingerbread jelly beans cupcake marzipan. Sweet roll toffee apple pie tootsie roll. Carrot cake cookie candy canes topping.",
+        "items": [
+            "Oven",
+            "Mixer",
+            "Cream Cheese",
+            "Eggs"
+        ],
+        "temperature": "Bake on 400 for 23 minutes"
+    },
+    {
+        "type": "Vanilla",
+        "description": "Cupcake ipsum dolor sit amet gummies. Cake chocolate sweet ice cream oat cake biscuit bear claw dessert. Jujubes marzipan toffee apple pie pastry dragée jujubes marshmallow. Dragée chocolate gingerbread liquorice chocolate bar jujubes. Sweet chocolate bar jelly-o chocolate cake candy carrot cake cotton candy macaroon marzipan. Sweet roll biscuit sweet gummies topping sesame snaps tootsie roll sugar plum pie. Sweet muffin croissant chocolate cake chupa chups. Donut croissant gummies donut powder ice cream. Chupa chups halvah apple pie topping jelly beans donut candy canes donut. Bonbon cake gummi bears cheesecake tart topping powder liquorice gummi bears.",
+        "items": [
+            "Milk",
+            "Mixer",
+            "Vanilla",
+            "Frosting"
+        ],
+        "temperature": "Bake on 350 for 15 minutes"
+    },
+    {
+        "type": "Chocolate",
+        "description": "Sugar plum cupcake chocolate cake jujubes carrot cake tiramisu croissant. Oat cake ice cream bonbon gingerbread. Chupa chups croissant tart powder marzipan. Lemon drops cookie oat cake tootsie roll danish tiramisu marzipan bear claw. Apple pie sesame snaps candy jelly beans brownie. Brownie cake gummi bears cookie. Sweet halvah apple pie sweet powder cheesecake sweet cheesecake bonbon. essert gummi bears lemon drops ice cream biscuit gummies lollipop donut cake. Bonbon dragée marzipan. Chocolate bar toffee sweet roll candy halvah. i bears cupcake bonbon cupcake. Lemon drops gummies carrot cake sweet marzipan chocolate cheesecake. ",
+        "items": [
+            "Chocolate chips",
+            "Sugar",
+            "Water",
+            "Oven"
+        ],
+        "temperature":"Bake on 345 for 20 minutes"
+    },
+    {
+        "type": "Funfetti",
+        "description": "Tootsie roll dessert lemon drops cookie lollipop danish chocolate bar. Gummi bears sweet roll lollipop. Danish oat cake croissant. Croissant brownie tart. Marshmallow muffin icing icing. Sweet roll gingerbread carrot cake fruitcake. hupa chups gummi bears halvah marzipan sugar plum jelly beans tootsie roll cookie bear claw.essert gummies sweet roll ice cream dragée gingerbread jelly beans cupcake marzipan. Sweet roll toffee apple pie tootsie roll. Carrot cake cookie candy canes topping.",
+        "items": [
+            "Sprinkles",
+            "Vanilla frosting",
+            "Party",
+            "Eggs"
+        ],
+        "temperature": "Bake on 300 for 20 minutes"
+    },
+    {
+        "type": "Lemon",
+        "description": "Cupcake ipsum dolor sit amet gummies. Cake chocolate sweet ice cream oat cake biscuit bear claw dessert. Jujubes marzipan toffee apple pie pastry dragée jujubes marshmallow. Dragée chocolate gingerbread liquorice chocolate bar jujubes. Sweet chocolate bar jelly-o chocolate cake candy carrot cake cotton candy macaroon marzipan. Sweet roll biscuit sweet gummies topping sesame snaps tootsie roll sugar plum pie. Sweet muffin croissant chocolate cake chupa chups. Donut croissant gummies donut powder ice cream. Chupa chups halvah apple pie topping jelly beans donut candy canes donut. Bonbon cake gummi bears cheesecake tart topping powder liquorice gummi bears.",
+        "items": [
+            "Vanilla",
+            "Lemon",
+            "Milk",
+            "Sugar"
+        ],
+        "temperature": "Bake on 400 for 16 minutes"
+    },
+    {
+        "type": "Oreo",
+        "description": "Sugar plum cupcake chocolate cake jujubes carrot cake tiramisu croissant. Oat cake ice cream bonbon gingerbread. Chupa chups croissant tart powder marzipan. Lemon drops cookie oat cake tootsie roll danish tiramisu marzipan bear claw. Apple pie sesame snaps candy jelly beans brownie. Brownie cake gummi bears cookie. Sweet halvah apple pie sweet powder cheesecake sweet cheesecake bonbon. essert gummi bears lemon drops ice cream biscuit gummies lollipop donut cake. Bonbon dragée marzipan. Chocolate bar toffee sweet roll candy halvah. i bears cupcake bonbon cupcake. Lemon drops gummies carrot cake sweet marzipan chocolate cheesecake. ",
+        "items": [
+            "Eggs",
+            "Milk",
+            "Mixer",
+            "Oreos"
+        ],
+        "temperature": "Bake on 400 for 20 minutes"
+    }
+]
