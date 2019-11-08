@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
     <style>
+        #sweet-treats{
+            margin-top: 30px;
+            text-align: center;
+            font-size: 80px;
+            color: #D04551;
+        }
+        .card-text{
+            font-weight: bold;
+            font-size: 20px;
+        }
 
         h1{
             font-family: 'Amatic SC', cursive;
@@ -14,7 +24,7 @@
             margin-left: 10px;
         }
         #title{
-            font-size: 60px;
+            font-size: 140px;
             color: #D04551;
         }
         body {
@@ -32,19 +42,37 @@
             margin-left: 10px;
 
         }
-        h4 {
+        h4,h6 {
             font-size: 17px;
             margin-left: 10px;
         }
         .card {
             background-color: floralwhite;
-            margin: 20px;
+            margin-top: 0;
+            margin-left: 80px;
+            margin-right: 80px;
+            margin-bottom: 80px;
         }
         #posts {
             margin-top: 30px;
         }
         h5{
             text-align: center;
+            font-size: 50px;
+            font-family: 'Amatic SC', cursive;
+            font-weight: bold;
+            color: #D04551;
+        }
+        .container2 {
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+        #refresh {
+            display: flex;
+            align-content: center;
+        }
+        h6{
+            font-family: 'Open Sans', sans-serif;
         }
     </style>
 </head>
@@ -60,7 +88,7 @@
         <img src="img/cupcakes.gif" class="card-img-top" alt="..." height="302px">
         <div class="card-body">
             <h5 class="card-title">Crazy Cupcakes</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text">Sugar plum cupcake chocolate cake jujubes carrot cake tiramisu croissant. Oat cake ice cream bonbon gingerbread. Chupa chups croissant tart powder marzipan.</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
     </div>
@@ -68,7 +96,7 @@
         <img src="img/cartooncupcake.png" class="card-img-top" alt="..." height="302px" width="400px">
         <div class="card-body">
             <h5 class="card-title">	Sweet Cakes</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text">Sugar plum cupcake chocolate cake jujubes carrot cake tiramisu croissant. Oat cake ice cream bonbon gingerbread. Chupa chups croissant tart powder marzipan.</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
     </div>
@@ -76,15 +104,18 @@
         <img src="img/cartooncupcake2.gif" class="card-img-top" alt="..." height="302">
         <div class="card-body">
             <h5 class="card-title">Magic Batter</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text">Sugar plum cupcake chocolate cake jujubes carrot cake tiramisu croissant. Oat cake ice cream bonbon gingerbread. Chupa chups croissant tart powder marzipan.</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
     </div>
 </div>
 
 
+<h1 id="sweet-treats">Sweet Treats: </h1>
 
-<div id="posts">
+<div class="container2">
+    <div id="posts">
+</div>
 
 </div>
 <button id="refresh">Refresh</button>
@@ -104,17 +135,13 @@
                     content += cupcakes.type;
                     content +="</h1>";
 
-                    content += "<h3>";
-                    content += cupcakes.temperature;
-                    content += "</h3>";
-
-                    content += "<h4>";
-                    content += cupcakes.items;
-                    content += "</h4>";
-
-                    content += "<p>";
+                    content += "<p style='font-weight: bold'>";
                     content += cupcakes.description;
                     content += "</p>";
+
+                    content += "<h6 style='font-size: 16px'>";
+                    content += cupcakes.temperature;
+                    content += "</h6>";
 
                     $("#posts").append(content);
 
