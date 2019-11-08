@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cupcake blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:400i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        #sweet-treats{
+            margin-top: 30px;
+            text-align: center;
+            font-size: 80px;
+            color: #D04551;
+        }
+        .card-text{
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        h1{
+            font-family: 'Amatic SC', cursive;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        #title{
+            font-size: 140px;
+            color: #D04551;
+        }
+        body {
+            background-color: lightblue;
+        }
+        p{
+            font-family: 'Open Sans', sans-serif;
+            margin-left: 10px;
+        }
+        .jumbotron-fluid {
+            background-image: url("img/cupcakes.jpg");
+        }
+        h3{
+            font-size: 20px;
+            margin-left: 10px;
+
+        }
+        h4,h6 {
+            font-size: 17px;
+            margin-left: 10px;
+        }
+        .card {
+            background-color: floralwhite;
+            margin-top: 0;
+            margin-left: 80px;
+            margin-right: 80px;
+            margin-bottom: 80px;
+        }
+        #posts {
+            margin-top: 30px;
+        }
+        h5{
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Amatic SC', cursive;
+            font-weight: bold;
+            color: #D04551;
+        }
+        .container2 {
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+        #refresh {
+            display: flex;
+            align-content: center;
+        }
+        h6{
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 id="title" style="text-align: center">Sugar & Spice Cupcake Shop</h1>
+    </div>
+</div>
+
+<div class="card-group">
+    <div class="card">
+        <img src="img/cupcakes.gif" class="card-img-top" alt="..." height="302px">
+        <div class="card-body">
+            <h5 class="card-title">Crazy Cupcakes</h5>
+            <p class="card-text">Sugar plum cupcake chocolate cake jujubes carrot cake tiramisu croissant. Oat cake ice cream bonbon gingerbread. Chupa chups croissant tart powder marzipan.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="img/cartooncupcake.png" class="card-img-top" alt="..." height="302px" width="400px">
+        <div class="card-body">
+            <h5 class="card-title">	Sweet Cakes</h5>
+            <p class="card-text">Sugar plum cupcake chocolate cake jujubes carrot cake tiramisu croissant. Oat cake ice cream bonbon gingerbread. Chupa chups croissant tart powder marzipan.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="img/cartooncupcake2.gif" class="card-img-top" alt="..." height="302">
+        <div class="card-body">
+            <h5 class="card-title">Magic Batter</h5>
+            <p class="card-text">Sugar plum cupcake chocolate cake jujubes carrot cake tiramisu croissant. Oat cake ice cream bonbon gingerbread. Chupa chups croissant tart powder marzipan.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+</div>
+
+
+<h1 id="sweet-treats">Sweet Treats: </h1>
+
+<div class="container2">
+    <div id="posts">
+</div>
+
+</div>
+<button id="refresh">Refresh</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    (function() {
+        "use strict";
+        function generateCupcakes() {
+            var requestCupcakes = $.ajax("data/cupcakes.json");
+
+            requestCupcakes.done(function (data) {
+                console.log(data);
+
+                $.each(data,function (index,cupcakes) {
+                    var content = "<h1 style='color: #D04551; font-weight: bold'>";
+                    content += cupcakes.type;
+                    content +="</h1>";
+
+                    content += "<p style='font-weight: bold'>";
+                    content += cupcakes.description;
+                    content += "</p>";
+
+                    content += "<h6 style='font-size: 16px'>";
+                    content += cupcakes.temperature;
+                    content += "</h6>";
+
+                    $("#posts").append(content);
+
+                });
+            });
+            requestCupcakes.fail(function (data) {
+                console.log(("Somthing went wrong"));
+            })
+        }
+        generateCupcakes();
+
+        $('#refresh').click(function(){
+            // reset my html to empty string
+            $('#posts').html("");
+            // call function to append new book list
+            generateCupcakes();
+        });
+
+    })();
+</script>
+</body>
+</html>
