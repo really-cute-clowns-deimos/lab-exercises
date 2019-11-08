@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax-blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:400i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+
+        h1{
+            font-family: 'Amatic SC', cursive;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        #title{
+            font-size: 60px;
+            color: #D04551;
+        }
+        body {
+            background-color: lightblue;
+        }
+        p{
+            font-family: 'Open Sans', sans-serif;
+            margin-left: 10px;
+        }
+        .jumbotron-fluid {
+            background-image: url("img/cupcakes.jpg");
+        }
+        h3{
+            font-size: 20px;
+            margin-left: 10px;
+
+        }
+        h4 {
+            font-size: 17px;
+            margin-left: 10px;
+        }
+        .card {
+            background-color: floralwhite;
+            margin: 20px;
+        }
+        #posts {
+            margin-top: 30px;
+        }
+        h5{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 id="title" style="text-align: center">Sugar & Spice Cupcake Shop</h1>
+    </div>
+</div>
+
+<div class="card-group">
+    <div class="card">
+        <img src="img/cupcakes.gif" class="card-img-top" alt="..." height="302px">
+        <div class="card-body">
+            <h5 class="card-title">Crazy Cupcakes</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="img/cartooncupcake.png" class="card-img-top" alt="..." height="302px" width="400px">
+        <div class="card-body">
+            <h5 class="card-title">	Sweet Cakes</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="img/cartooncupcake2.gif" class="card-img-top" alt="..." height="302">
+        <div class="card-body">
+            <h5 class="card-title">Magic Batter</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="posts">
+
+</div>
+<button id="refresh">Refresh</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    (function() {
+        "use strict";
+        function generateCupcakes() {
+            var requestCupcakes = $.ajax("data/cupcakes.json");
+
+            requestCupcakes.done(function (data) {
+                console.log(data);
+
+                $.each(data,function (index,cupcakes) {
+                    var content = "<h1 style='color: #D04551; font-weight: bold'>";
+                    content += cupcakes.type;
+                    content +="</h1>";
+
+                    content += "<h3>";
+                    content += cupcakes.temperature;
+                    content += "</h3>";
+
+                    content += "<h4>";
+                    content += cupcakes.items;
+                    content += "</h4>";
+
+                    content += "<p>";
+                    content += cupcakes.description;
+                    content += "</p>";
+
+                    $("#posts").append(content);
+
+                });
+            });
+            requestCupcakes.fail(function (data) {
+                console.log(("Somthing went wrong"));
+            })
+        }
+        generateCupcakes();
+
+        $('#refresh').click(function(){
+            // reset my html to empty string
+            $('#posts').html("");
+            // call function to append new book list
+            generateCupcakes();
+        });
+
+    })();
+</script>
+</body>
+</html>
